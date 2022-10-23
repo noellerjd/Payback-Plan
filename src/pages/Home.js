@@ -13,11 +13,11 @@ export default function Home() {
                 This project came about as a way to track my own expenses and
                 budget in an easy way.
               </p>
-              <p>Technical Description goes here</p>
               <p>
                 This is mainly just for my own personal use, but maybe this can
-                help you too!
+                help you too.
               </p>
+              <p>Push the "Get Started" button to begin!</p>
             </div>
           </div>
           <div className="start">
