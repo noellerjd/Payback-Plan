@@ -1,6 +1,7 @@
 import React from "react";
-import GHLink from "../assets/githublogoblack.png";
-import LILink from "../assets/linkedinlogoblack.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -11,18 +12,20 @@ export default function Footer() {
         </div>
         <div className="footer-links">
           <a
+            id="github-btn"
             href="https://github.com/noellerjd"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={GHLink} alt="GitHub link" />
+            <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
           <a
+            id="linkedin-btn"
             href="https://www.linkedin.com/in/justin-noeller-797181235/"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={LILink} alt="LinkedIn link" />
+            <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
         </div>
       </div>
