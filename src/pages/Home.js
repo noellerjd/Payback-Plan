@@ -15,7 +15,7 @@ export default function Home() {
               </p>
               <p>
                 This is mainly just for my own personal use, but maybe this can
-                help you too.
+                help you too
               </p>
               <p>Push the "Get Started" button to begin!</p>
             </div>

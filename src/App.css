@@ -6,12 +6,21 @@
 :root {
   --lightblack: #424242;
   --darkblack: #222222;
+  --extralightgreen: #d8f8d1;
   --lightgreen: #a4cf9b;
   --darkgreen: #5a874f;
   --white: #f5f3ed;
 }
 body {
   background-color: var(--white);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 /* Header Styling */
 .header {
@@ -93,13 +102,113 @@ body {
   border-radius: 10px;
   color: var(--darkblack);
   box-shadow: 0px 1px 0px 1px var(--darkgreen);
+  transition: ease all 0.3s;
 }
 .start h3:hover {
-  background-color: var(--darkblack);
-  color: var(--lightgreen);
+  background-color: var(--darkgreen);
+  color: var(--extralightgreen);
   cursor: pointer;
   box-shadow: none;
-  box-shadow: 0px 1px 0px 1px var(--lightblack);
+  box-shadow: 0px 1px 0px 1px var(--darkgreen);
+}
+/* Budget Page Styling */
+.budget-container {
+  display: flex;
+  justify-content: center;
+}
+.budget-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+  background-color: var(--lightgreen);
+  padding: 20px;
+  width: 19rem;
+  color: var(--darkblack);
+  border-radius: 25px;
+  box-shadow: 0px 3px 0px 2px var(--darkgreen);
+}
+.budget-form label {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+.budget-form input {
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid var(--darkgreen);
+  background-color: var(--extralightgreen);
+  height: 1.5rem;
+  width: 80%;
+  font-size: 1.2rem;
+  transition: ease all 0.3s;
+}
+.budget-form input:hover {
+  border: 2px solid var(--lightblack);
+  background-color: var(--white);
+}
+.add-expense-field {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+.add-expense-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--lightgreen);
+  border: 2px solid var(--darkgreen);
+  border-radius: 25px;
+  box-shadow: 0px 1px 0px 0px var(--darkgreen);
+  color: var(--darkblack);
+  padding: 5px;
+  width: 10.5rem;
+  font-size: 1.1rem;
+  cursor: default;
+}
+.add-expense-container p {
+  padding-left: 0.4rem;
+}
+#add-expense-btn {
+  font-size: 15px;
+  background-color: var(--extralightgreen);
+  border: 2px solid var(--darkgreen);
+  border-radius: 25px;
+  color: var(--darkgreen);
+  padding: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+  transition: ease all 0.3s;
+  cursor: pointer;
+}
+#add-expense-btn:hover {
+  background-color: var(--darkgreen);
+  border: 2px solid var(--darkgreen);
+  color: var(--extralightgreen);
+}
+.submit-field {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#submit-btn {
+  font-size: 1.1rem;
+  background-color: var(--lightgreen);
+  border: 2px solid var(--darkgreen);
+  border-radius: 10px;
+  box-shadow: 0px 1px 0px 0px var(--darkgreen);
+  color: var(--darkblack);
+  padding: 7px;
+  transition: ease all 0.3s;
+  cursor: pointer;
+}
+#submit-btn:hover {
+  background-color: var(--darkgreen);
+  box-shadow: 0px 2px 0px 0px var(--darkgreen);
+  color: var(--extralightgreen);
+  border: 2px solid var(--darkgreen);
 }
 /* Footer Styling */
 .footer {
@@ -109,6 +218,14 @@ body {
   bottom: 0;
   width: 100vw;
   box-shadow: 0px -1px 2px 1px var(--darkgreen);
+}
+#back-to-top {
+  position: fixed;
+  bottom: 60px;
+  right: 0;
+}
+#back-to-top img {
+  width: 50px;
 }
 .footer-container {
   display: flex;
@@ -126,6 +243,22 @@ body {
   width: 6rem;
   align-items: center;
 }
-.footer-links img {
-  width: 30px;
+.footer-links a {
+  color: var(--lightblack);
+  background-color: var(--lightgreen);
+  padding: 5px;
+  /* border-radius: 25px; */
+  box-shadow: 0px 1px 0px 1px var(--darkgreen);
+  transition: ease all 0.3s;
+}
+#github-btn {
+  border-radius: 25px;
+}
+#linkedin-btn {
+  border-radius: 25px;
+}
+.footer a:hover {
+  color: var(--extralightgreen);
+  background-color: var(--lightblack);
+  box-shadow: 0px 1px 0px 1px var(--darkblack);
 }

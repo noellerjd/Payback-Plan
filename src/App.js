@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./assets/fonts.css";
 
 import Home from "./pages/Home";
+import Budget from "./pages/Budget";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 
@@ -13,6 +14,7 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/budget" element={<Budget />} />
         </Routes>
         <Footer />
       </Router>
