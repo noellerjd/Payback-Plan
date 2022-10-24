@@ -1,3 +1,3 @@
 # Payback-Plan
 
-![image](https://user-images.githubusercontent.com/50307506/197367566-a7d278d1-c9e5-4d0e-8481-53afc8f0a7da.png)
+![image](https://user-images.githubusercontent.com/50307506/197427854-e79a85b5-4d4c-4b59-9db2-2c37be62a876.png)
