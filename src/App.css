@@ -122,7 +122,7 @@ input[type="number"] {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
   background-color: var(--lightgreen);
   padding: 20px;
   width: 19rem;
@@ -201,6 +201,7 @@ input[type="number"] {
   box-shadow: 0px 1px 0px 0px var(--darkgreen);
   color: var(--darkblack);
   padding: 7px;
+  margin-bottom: 6rem;
   transition: ease all 0.3s;
   cursor: pointer;
 }
@@ -209,6 +210,46 @@ input[type="number"] {
   box-shadow: 0px 2px 0px 0px var(--darkgreen);
   color: var(--extralightgreen);
   border: 2px solid var(--darkgreen);
+}
+/* Expense Styling */
+.expense-container {
+  display: flex;
+  justify-content: center;
+}
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0.5rem;
+  background-color: var(--lightgreen);
+  padding: 20px;
+  width: 19rem;
+  color: var(--darkblack);
+  border-radius: 25px;
+  box-shadow: 0px 3px 0px 2px var(--darkgreen);
+}
+.expense-form label {
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+}
+.expense-amount-label {
+  margin-top: 10px;
+}
+.expense-form input {
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid var(--darkgreen);
+  background-color: var(--extralightgreen);
+  height: 1.5rem;
+  width: 80%;
+  font-size: 1.2rem;
+  transition: ease all 0.3s;
+}
+.expense-form input:hover {
+  border: 2px solid var(--lightblack);
+  background-color: var(--white);
 }
 /* Footer Styling */
 .footer {
