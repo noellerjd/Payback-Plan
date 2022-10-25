@@ -105,11 +105,11 @@ input[type="number"] {
   transition: ease all 0.3s;
 }
 .start h3:hover {
-  background-color: var(--darkgreen);
+  background-color: var(--lightblack);
   color: var(--extralightgreen);
   cursor: pointer;
   box-shadow: none;
-  box-shadow: 0px 1px 0px 1px var(--darkgreen);
+  box-shadow: 0px 1px 0px 1px var(--darkblack);
 }
 /* Budget Page Styling */
 .budget-container {
@@ -184,8 +184,8 @@ input[type="number"] {
   cursor: pointer;
 }
 #add-expense-btn:hover {
-  background-color: var(--darkgreen);
-  border: 2px solid var(--darkgreen);
+  background-color: var(--lightblack);
+  border: 2px solid var(--darkblack);
   color: var(--extralightgreen);
 }
 .submit-field {
@@ -206,15 +206,16 @@ input[type="number"] {
   cursor: pointer;
 }
 #submit-btn:hover {
-  background-color: var(--darkgreen);
-  box-shadow: 0px 2px 0px 0px var(--darkgreen);
+  background-color: var(--lightblack);
+  box-shadow: 0px 2px 0px 0px var(--darkblack);
   color: var(--extralightgreen);
-  border: 2px solid var(--darkgreen);
+  border: 2px solid var(--lightblack);
 }
 /* Expense Styling */
 .expense-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 5px;
 }
 .expense-form {
   display: flex;
@@ -251,6 +252,25 @@ input[type="number"] {
   border: 2px solid var(--lightblack);
   background-color: var(--white);
 }
+/* Expense Graph Styling */
+.graph-page-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.graph-container {
+  display: flex;
+  justify-content: center;
+}
+.graph {
+  width: 30rem;
+}
+@media screen and (max-width: 490px) {
+  .graph {
+    width: 20rem;
+  }
+}
 /* Footer Styling */
 .footer {
   background-color: var(--lightgreen);
@@ -262,11 +282,18 @@ input[type="number"] {
 }
 #back-to-top {
   position: fixed;
-  bottom: 60px;
-  right: 0;
+  bottom: 4.5rem;
+  right: 1rem;
+  background-color: var(--lightgreen);
+  box-shadow: 0px 1px 0px 1px var(--darkgreen);
+  color: var(--lightblack);
+  border-radius: 100%;
+  padding: 5px 10px 5px 10px;
 }
-#back-to-top img {
-  width: 50px;
+#back-to-top:hover {
+  background-color: var(--lightblack);
+  box-shadow: 0px 1px 0px 1px var(--darkblack);
+  color: var(--extralightgreen);
 }
 .footer-container {
   display: flex;

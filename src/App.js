@@ -4,6 +4,8 @@ import "./assets/fonts.css";
 
 import Home from "./pages/Home";
 import Budget from "./pages/Budget";
+import { ExpenseGraph } from "./pages/ExpenseGraph";
+
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 
@@ -15,6 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/budget" element={<Budget />} />
+          <Route path="/expense-graph" element={<ExpenseGraph />} />
         </Routes>
         <Footer />
       </Router>
