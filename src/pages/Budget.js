@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-// import ReactDOM from "react-dom";
 import ScrollToTop from "../component/ScrollToTop";
 import ExpenseCard from "../component/ExpenseCard";
 
@@ -53,6 +52,7 @@ export default function Budget() {
     }
     if (expenses.length === 0) {
       alert("No expenses listed.");
+      return;
     }
     for (let i = 0; i < expenseInputList.length; i++) {
       if (expenses[i] == null) {
@@ -60,12 +60,14 @@ export default function Budget() {
       }
       if (expenses[i].expenseName == null || expenses[i].expenseName === "") {
         alert("Expense name missing.");
+        return;
       }
       if (
         expenses[i].expenseAmount == null ||
         expenses[i].expenseAmount === ""
       ) {
         alert("Expense amount missing.");
+        return;
       }
     }
     const data = { paycheckAmount: paycheckAmount, expenses: expenses };
@@ -80,12 +82,13 @@ export default function Budget() {
     navigate("/expense-graph", { replace: true }, [navigate]);
   };
 
-  // console.log(expenseInputList.filter((expense) => expense.key > 1));
   return (
     <section className="budget">
       <div className="budget-container">
         <form className="budget-form">
-          <label htmlFor="pay">Take Home Pay (Monthly)</label>
+          <label htmlFor="pay">
+            Take Home Pay (<a href="/">Monthly</a>)
+          </label>
           <input
             type="number"
             minLength="0"
