@@ -2,6 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  function RecentGraph() {
+    const graphData = localStorage.getItem("budgetData");
+    const parsedData = JSON.parse(graphData);
+
+    if (parsedData == null) {
+      return;
+    }
+
+    return (
+      <div className="start">
+        <Link to="/expense-graph">
+          <h3>Visit most recent graph</h3>
+        </Link>
+      </div>
+    );
+  }
+
   return (
     <section className="home">
       <div className="home-container">
@@ -25,6 +42,7 @@ export default function Home() {
               <h3>Get Started</h3>
             </Link>
           </div>
+          <RecentGraph />
         </div>
       </div>
     </section>
