@@ -1,10 +1,6 @@
 import React from "react";
 
 const ExpenseInput = (props) => {
-  const handleName = (event) => {};
-
-  const handleAmount = (event) => {};
-
   return (
     <div className="expense-container">
       <div className="expense-form">

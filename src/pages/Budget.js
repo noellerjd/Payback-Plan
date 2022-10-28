@@ -87,7 +87,7 @@ export default function Budget() {
       <div className="budget-container">
         <form className="budget-form">
           <label htmlFor="pay">
-            Take Home Pay (<a href="/">Monthly</a>)
+            Take Home Pay (<a href="/take-home">Monthly</a>)
           </label>
           <input
             type="number"
