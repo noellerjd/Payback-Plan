@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PaybackPlan/static/css/main.8695c5e7.css",
+    "main.js": "/PaybackPlan/static/js/main.bc04ab63.js",
+    "index.html": "/PaybackPlan/index.html",
+    "main.8695c5e7.css.map": "/PaybackPlan/static/css/main.8695c5e7.css.map",
+    "main.bc04ab63.js.map": "/PaybackPlan/static/js/main.bc04ab63.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8695c5e7.css",
+    "static/js/main.bc04ab63.js"
+  ]
+}
