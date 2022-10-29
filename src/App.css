@@ -89,7 +89,7 @@ input[type="number"] {
 .start {
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .start a {
   text-decoration: none;
@@ -270,6 +270,69 @@ input[type="number"] {
   .graph {
     width: 20rem;
   }
+}
+/* Take Home Calculator Styling */
+.take-home {
+  display: flex;
+  justify-content: center;
+}
+.take-home-container {
+  margin-top: 20px;
+}
+.take-home-form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lightgreen);
+}
+#reset-container {
+  display: flex;
+  justify-content: center;
+}
+#reset-container div {
+  display: flex;
+  justify-content: center;
+}
+.reset-button button {
+  margin-bottom: 1rem;
+}
+.reset-btn {
+  font-size: 1.1rem;
+  background-color: var(--lightgreen);
+  border: 2px solid var(--darkgreen);
+  border-radius: 10px;
+  box-shadow: 0px 1px 0px 0px var(--darkgreen);
+  color: var(--darkblack);
+  padding: 7px;
+  margin-bottom: 3rem;
+  transition: ease all 0.3s;
+  cursor: pointer;
+}
+.reset-btn:hover {
+  background-color: var(--lightblack);
+  box-shadow: 0px 2px 0px 0px var(--darkblack);
+  color: var(--extralightgreen);
+  border: 2px solid var(--lightblack);
+}
+#take-home-display {
+  font-size: 1.1rem;
+  background-color: var(--lightgreen);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 3px 0px 2px var(--darkgreen);
+  color: var(--darkblack);
+  transition: ease all 0.3s;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  cursor: default;
+}
+#take-home-display:hover {
+  background-color: var(--lightblack);
+  box-shadow: 0px 3px 0px 2px var(--darkblack);
+  color: var(--extralightgreen);
+}
+.local-take-home {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 /* Footer Styling */
 .footer {

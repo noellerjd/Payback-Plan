@@ -5,7 +5,7 @@ export default function TakeHomePayCalculator() {
   const [hoursPerWeek, setHoursPerWeek] = useState();
   const TakeHomeDisplay = document.getElementById("take-home-display");
   const submitBtn = document.getElementById("submit-btn");
-  const resetBtn = document.getElementById("reset-btn");
+  const resetEl = document.getElementById("reset-container");
   const localTakeHome = document.getElementById("local-take-home");
 
   const updateHoursPerWeek = (hours) => {
@@ -58,8 +58,8 @@ export default function TakeHomePayCalculator() {
     if (submitBtn.style.display === "block") {
       submitBtn.style.display = "none";
     }
-    if (resetBtn.style.display === "none") {
-      resetBtn.style.display = "block";
+    if (resetEl.style.display === "none") {
+      resetEl.style.display = "block";
     }
     dataPay();
   };
@@ -70,14 +70,15 @@ export default function TakeHomePayCalculator() {
   };
 
   return (
-    <section>
-      <div>
+    <section className="take-home">
+      <div className="take-home-container">
         <p id="take-home-display" style={{ display: "none" }}>
-          Most recent calculation: $<span id="local-take-home"></span>/month
-          take home pay
+          Most recent calculation: <span className="local-take-home">$</span>
+          <span id="local-take-home" className="local-take-home"></span>/month
+          take home pay.
         </p>
-        <div>
-          <form className="takehome-pay-form">
+        <div className="expense-container">
+          <form className="expense-form">
             <label htmlFor="hourly">What is your hourly pay?</label>
             <input
               type="number"
@@ -98,16 +99,29 @@ export default function TakeHomePayCalculator() {
             />
           </form>
         </div>
-        <button
-          onClick={handleSubmit}
-          id="submit-btn"
-          style={{ display: "block" }}
-        >
-          Submit
-        </button>
-        <a href="/take-home" id="reset-btn" style={{ display: "none" }}>
-          <button onClick={resetStorage}>Reset</button>
-        </a>
+        <div className="submit-field">
+          <button
+            onClick={handleSubmit}
+            id="submit-btn"
+            style={{ display: "block" }}
+          >
+            Submit
+          </button>
+          <div id="reset-container" style={{ display: "none" }}>
+            <div className="reset-button">
+              <a href="/take-home">
+                <button className="reset-btn" onClick={resetStorage}>
+                  Reset
+                </button>
+              </a>
+            </div>
+            <div>
+              <a href="/budget">
+                <button className="reset-btn">Return to expense entry</button>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

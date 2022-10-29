@@ -13,6 +13,8 @@ export default function Budget() {
   const [paycheckAmount, setPaycheckAmount] = useState();
   const [expenses, setExpenses] = useState([]);
 
+  const takeHomeEl = document.getElementById("take-home-input");
+
   const addExpenseBtnClick = (event) => {
     setExpenseInputList(
       expenseInputList.concat(
@@ -74,13 +76,59 @@ export default function Budget() {
 
     localStorage.setItem("budgetData", JSON.stringify(data));
 
-    const test1 = localStorage.getItem("budgetData");
-    const parsetest = JSON.parse(test1);
-
-    console.log(parsetest.expenses);
-
     navigate("/expense-graph", { replace: true }, [navigate]);
   };
+  // const pullTakeHome = localStorage.getItem("takeHomePayData");
+  // const parsedTakeHome = JSON.parse(pullTakeHome);
+  // const intTakeHome = parseInt(parsedTakeHome.storedTakeHome)
+  // const takeHome = intTakeHome;
+  // if (takeHome) {
+  //   console.log("no data");
+  // } else {
+  //   console.log(takeHome);
+  // }
+
+  const readTakeHome = () => {
+    const takeHome = "";
+    const pullTakeHome = localStorage.getItem("takeHomePayData");
+    const parsedTakeHome = JSON.parse(pullTakeHome);
+    if (parsedTakeHome == null) {
+      console.log("No take home data found.");
+      takeHomeEl.placeholder = "($)";
+      return;
+    }
+    // if (!parsedTakeHome) {
+    //   takeHomeEl.placeholder = "($)";
+    //   return;
+    else {
+      // const intTakeHome = String(parsedTakeHome.storedTakeHome);
+      // const takeHome = parsedTakeHome.storedTakeHome;
+      // console.log(intTakeHome);
+      // console.log(parsedTakeHome.storedTakeHome);
+      // const test1 = parsedTakeHome.storedTakeHome;
+      // const takeHomeString = test1;
+      // takeHomeEl.placeholder = "test";
+      // console.log(takeHomeString);
+      setPlaceHolder();
+      return;
+    }
+  };
+
+  const setPlaceHolder = () => {
+    const pullTakeHome = localStorage.getItem("takeHomePayData");
+    const parsedTakeHome = JSON.parse(pullTakeHome);
+    const intTakeHome = String(parsedTakeHome.storedTakeHome);
+    // const takeHome = parsedTakeHome.storedTakeHome;
+    // console.log(intTakeHome);
+    // console.log(parsedTakeHome.storedTakeHome);
+    const test1 = parsedTakeHome.storedTakeHome;
+    // const takeHomeString =  + test1 + ;
+    // console.log(takeHomeString);
+    document.getElementsByName("takehome")[0].placeholder = `"` + test1 + `"`;
+    // console.log(takeHomeString);
+  };
+
+  readTakeHome();
 
   return (
     <section className="budget">
@@ -91,8 +139,10 @@ export default function Budget() {
           </label>
           <input
             type="number"
+            name="takehome"
             minLength="0"
             placeholder="($)"
+            id="take-home-input"
             onChange={(event) => {
               updatePaycheckAmount(event.target.value);
             }}

@@ -10,16 +10,12 @@ export function ExpenseGraph() {
   const localAmounts = parsedData.expenses.map((expense) =>
     parseInt(expense.expenseAmount)
   );
-  console.log(localAmounts);
 
   const expenseTotal = localAmounts.reduce((accumulator, value) => {
     return accumulator + value;
   }, 0);
 
-  console.log(expenseTotal);
-
   const paycheck = parseInt(parsedData.paycheckAmount) - expenseTotal;
-  console.log(paycheck);
 
   const finalAmounts = parsedData.expenses
     .map((expense) => expense.expenseAmount)
