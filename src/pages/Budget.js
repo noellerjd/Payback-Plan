@@ -13,7 +13,29 @@ export default function Budget() {
   const [paycheckAmount, setPaycheckAmount] = useState();
   const [expenses, setExpenses] = useState([]);
 
-  const takeHomeEl = document.getElementById("take-home-input");
+  // const TakeHomeInfo = () => {
+  //   const localTakeHome = document.getElementById("local-take-home");
+  //   const THPCard = document.getElementById("thp-card");
+  //   if (localStorage.getItem("takeHomePayData") !== null) {
+  //     const storedTHP = localStorage.getItem("takeHomePayData");
+  //     const parsedTHP = JSON.parse(storedTHP);
+  //     const localTHP = parseInt(parsedTHP.storedTakeHome);
+  //     localTakeHome.innerText = localTHP;
+  //     console.log(localTHP);
+  //     console.log("data found");
+  //   } else {
+  //     console.log(THPCard);
+  //     // THPCard.style.display = "none";
+  //     console.log("no stored THP");
+  //   }
+  //   // if (THPCard.innerHTML == null) {
+  //   //   console.log("no data");
+  //   // } else {
+  //   //   console.log(localTHP);
+  //   // }
+  // };
+
+  // TakeHomeInfo();
 
   const addExpenseBtnClick = (event) => {
     setExpenseInputList(
@@ -73,81 +95,42 @@ export default function Budget() {
       }
     }
     const data = { paycheckAmount: paycheckAmount, expenses: expenses };
+    console.log("test");
 
     localStorage.setItem("budgetData", JSON.stringify(data));
 
     navigate("/expense-graph", { replace: true }, [navigate]);
   };
-  // const pullTakeHome = localStorage.getItem("takeHomePayData");
-  // const parsedTakeHome = JSON.parse(pullTakeHome);
-  // const intTakeHome = parseInt(parsedTakeHome.storedTakeHome)
-  // const takeHome = intTakeHome;
-  // if (takeHome) {
-  //   console.log("no data");
-  // } else {
-  //   console.log(takeHome);
-  // }
-
-  const readTakeHome = () => {
-    const takeHome = "";
-    const pullTakeHome = localStorage.getItem("takeHomePayData");
-    const parsedTakeHome = JSON.parse(pullTakeHome);
-    if (parsedTakeHome == null) {
-      console.log("No take home data found.");
-      takeHomeEl.placeholder = "($)";
-      return;
-    }
-    // if (!parsedTakeHome) {
-    //   takeHomeEl.placeholder = "($)";
-    //   return;
-    else {
-      // const intTakeHome = String(parsedTakeHome.storedTakeHome);
-      // const takeHome = parsedTakeHome.storedTakeHome;
-      // console.log(intTakeHome);
-      // console.log(parsedTakeHome.storedTakeHome);
-      // const test1 = parsedTakeHome.storedTakeHome;
-      // const takeHomeString = test1;
-      // takeHomeEl.placeholder = "test";
-      // console.log(takeHomeString);
-      setPlaceHolder();
-      return;
-    }
-  };
-
-  const setPlaceHolder = () => {
-    const pullTakeHome = localStorage.getItem("takeHomePayData");
-    const parsedTakeHome = JSON.parse(pullTakeHome);
-    const intTakeHome = String(parsedTakeHome.storedTakeHome);
-    // const takeHome = parsedTakeHome.storedTakeHome;
-    // console.log(intTakeHome);
-    // console.log(parsedTakeHome.storedTakeHome);
-    const test1 = parsedTakeHome.storedTakeHome;
-    // const takeHomeString =  + test1 + ;
-    // console.log(takeHomeString);
-    document.getElementsByName("takehome")[0].placeholder = `"` + test1 + `"`;
-    // console.log(takeHomeString);
-  };
-
-  readTakeHome();
 
   return (
     <section className="budget">
+      {/* <div className="take-home-card" id="thp-card" style={{ display: "flex" }}>
+        <div className="take-home-container" id="take-home-width">
+          <p id="take-home-display">
+            Recent calculation: <span className="local-take-home">$</span>
+            <span id="local-take-home" className="local-take-home"></span>/month
+            take home pay.
+          </p>
+        </div>
+      </div> */}
       <div className="budget-container">
-        <form className="budget-form">
-          <label htmlFor="pay">
-            Take Home Pay (<a href="/take-home">Monthly</a>)
-          </label>
-          <input
-            type="number"
-            name="takehome"
-            minLength="0"
-            placeholder="($)"
-            id="take-home-input"
-            onChange={(event) => {
-              updatePaycheckAmount(event.target.value);
-            }}
-          />
-        </form>
+        <div>
+          <form className="budget-form">
+            <label htmlFor="pay">
+              Take Home Pay (<a href="/take-home">Monthly</a>)
+            </label>
+            <input
+              type="number"
+              name="takehome"
+              minLength="0"
+              placeholder="($)"
+              id="take-home-input"
+              onChange={(event) => {
+                updatePaycheckAmount(event.target.value);
+              }}
+            />
+          </form>
+        </div>
       </div>
       <div className="expense-list-container">
         {expenseInputList}

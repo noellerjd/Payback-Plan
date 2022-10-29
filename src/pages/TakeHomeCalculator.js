@@ -73,7 +73,7 @@ export default function TakeHomePayCalculator() {
     <section className="take-home">
       <div className="take-home-container">
         <p id="take-home-display" style={{ display: "none" }}>
-          Most recent calculation: <span className="local-take-home">$</span>
+          Recent calculation: <span className="local-take-home">$</span>
           <span id="local-take-home" className="local-take-home"></span>/month
           take home pay.
         </p>
