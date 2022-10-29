@@ -16,10 +16,13 @@ export default function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/budget" element={<Budget />} />
-          <Route path="/expense-graph" element={<ExpenseGraph />} />
-          <Route path="/take-home" element={<TakeHomePayCalculator />} />
+          <Route path="/PaybackPlan" element={<Home />} />
+          <Route path="/PaybackPlan/budget" element={<Budget />} />
+          <Route path="/PaybackPlan/expense-graph" element={<ExpenseGraph />} />
+          <Route
+            path="/PaybackPlan/take-home"
+            element={<TakeHomePayCalculator />}
+          />
         </Routes>
         <Footer />
       </Router>

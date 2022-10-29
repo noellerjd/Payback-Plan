@@ -59,7 +59,7 @@ export function ExpenseGraph() {
         </div>
       </div>
       <div className="graph-text">
-        <p>Explanation text goes here</p>
+        {/* <p>Explanation text goes here</p> */}
         <ul>
           <li>All expenses cost a total of ${expenseTotal}</li>
           <li>After paying all expenses, you'll have ${paycheck} leftover</li>
