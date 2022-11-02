@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div className="header" id="top">
-      <Link to="/PaybackPlan">
+      <Link to="/Payback-Plan">
         <div>
           <h1 className="title">
             <span className="title1">PayBack</span>

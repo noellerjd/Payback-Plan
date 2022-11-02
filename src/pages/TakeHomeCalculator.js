@@ -109,14 +109,14 @@ export default function TakeHomePayCalculator() {
           </button>
           <div id="reset-container" style={{ display: "none" }}>
             <div className="reset-button">
-              <a href="/PaybackPlan/take-home">
+              <a href="/Payback-Plan/take-home">
                 <button className="reset-btn" onClick={resetStorage}>
                   Reset
                 </button>
               </a>
             </div>
             <div>
-              <a href="/PaybackPlan/budget">
+              <a href="/Payback-Plan/budget">
                 <button className="reset-btn">Return to expense entry</button>
               </a>
             </div>

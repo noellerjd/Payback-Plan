@@ -2,7 +2,7 @@
   "name": "payback-plan",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://noellerjd.github.io/PaybackPlan",
+  "homepage": "https://noellerjd.github.io/Payback-Plan",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",

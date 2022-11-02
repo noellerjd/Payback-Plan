@@ -117,7 +117,7 @@ export default function Budget() {
         <div>
           <form className="budget-form">
             <label htmlFor="pay">
-              <a href="/PaybackPlan/take-home">Take Home Pay (Monthly)</a>
+              <a href="/Payback-Plan/take-home">Take Home Pay (Monthly)</a>
             </label>
             <input
               type="number"

@@ -12,7 +12,7 @@ export default function Home() {
 
     return (
       <div className="start">
-        <Link to="/PaybackPlan/expense-graph">
+        <Link to="/Payback-Plan/expense-graph">
           <h3>Visit most recent graph</h3>
         </Link>
       </div>
@@ -38,7 +38,7 @@ export default function Home() {
             </div>
           </div>
           <div className="start">
-            <Link to="/PaybackPlan/budget">
+            <Link to="/Payback-Plan/budget">
               <h3>Get Started</h3>
             </Link>
           </div>
