@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/Payback-Plan" element={<Home />} />
           <Route path="/Payback-Plan/budget" element={<Budget />} />
           <Route
-            path="/Payback-Plan/expense-graph"
+            path="/Payback-Plan/budget/expense-graph"
             element={<ExpenseGraph />}
           />
           <Route

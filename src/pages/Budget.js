@@ -99,7 +99,7 @@ export default function Budget() {
 
     localStorage.setItem("budgetData", JSON.stringify(data));
 
-    navigate("Payback-Plan/expense-graph", { replace: true }, [navigate]);
+    navigate("expense-graph", { replace: true }, [navigate]);
   };
 
   return (

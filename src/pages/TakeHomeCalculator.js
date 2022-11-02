@@ -65,10 +65,10 @@ export default function TakeHomePayCalculator() {
     dataPay();
   };
 
-  const resetStorage = () => {
-    localStorage.removeItem("takeHomePayData");
-    console.log("test");
-  };
+  // const resetStorage = () => {
+  //   localStorage.removeItem("takeHomePayData");
+  //   console.log("test");
+  // };
 
   return (
     <section className="take-home">

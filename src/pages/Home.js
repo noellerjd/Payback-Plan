@@ -12,7 +12,7 @@ export default function Home() {
 
     return (
       <div className="start">
-        <Link to="/Payback-Plan/expense-graph">
+        <Link to="/Payback-Plan/budget/expense-graph">
           <h3>Visit most recent graph</h3>
         </Link>
       </div>
