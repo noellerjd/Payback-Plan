@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function TakeHomePayCalculator() {
   const [hourlyPay, setHourlyPay] = useState();
@@ -109,16 +110,16 @@ export default function TakeHomePayCalculator() {
           </button>
           <div id="reset-container" style={{ display: "none" }}>
             <div className="reset-button">
-              <a href="/Payback-Plan/take-home">
+              <Link to="/Payback-Plan/take-home">
                 <button className="reset-btn" onClick={resetStorage}>
                   Reset
                 </button>
-              </a>
+              </Link>
             </div>
             <div>
-              <a href="/Payback-Plan/budget">
+              <Link to="/Payback-Plan/budget">
                 <button className="reset-btn">Return to expense entry</button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
