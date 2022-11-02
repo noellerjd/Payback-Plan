@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import ScrollToTop from "../component/ScrollToTop";
@@ -117,7 +117,7 @@ export default function Budget() {
         <div>
           <form className="budget-form">
             <label htmlFor="pay">
-              <a href="/Payback-Plan/take-home">Take Home Pay (Monthly)</a>
+              <Link to="/Payback-Plan/take-home">Take Home Pay (Monthly)</Link>
             </label>
             <input
               type="number"
