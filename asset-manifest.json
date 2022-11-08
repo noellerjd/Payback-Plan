@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Payback-Plan/static/css/main.8695c5e7.css",
+    "main.css": "/Payback-Plan/static/css/main.1ac8a2ba.css",
     "main.js": "/Payback-Plan/static/js/main.87ff67ce.js",
     "index.html": "/Payback-Plan/index.html",
-    "main.8695c5e7.css.map": "/Payback-Plan/static/css/main.8695c5e7.css.map",
+    "main.1ac8a2ba.css.map": "/Payback-Plan/static/css/main.1ac8a2ba.css.map",
     "main.87ff67ce.js.map": "/Payback-Plan/static/js/main.87ff67ce.js.map"
   },
   "entrypoints": [
-    "static/css/main.8695c5e7.css",
+    "static/css/main.1ac8a2ba.css",
     "static/js/main.87ff67ce.js"
   ]
 }
